@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = [1,2,4,5,6,7,8,9,4,5,6,77,55,44,22,5,6,7,1,12,45,3,4,76];
+    let totalPrime = 0;
+    for (let i=0 ; i<array1.length ; i++) {
+        let prime = true;
+        if (array1[i]<2) {
+            prime = false;
+        }else {
+            if (array1[i]>3) {
+                for (let j=2 ; j<array1[i] ; j++) {
+                    if (array1[i]%j==0) {
+                        prime= false;
+                    }
+                }
+            }
+        }
+        if (prime){
+            totalPrime+=array1[i];
+        }
+    }
+    document.write(totalPrime)
+</script>
+</body>
+</html>
